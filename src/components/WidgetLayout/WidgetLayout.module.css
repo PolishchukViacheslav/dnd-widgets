@@ -48,6 +48,7 @@
     }
     :global(.material-symbols-outlined) {
       color: var(--color-danger);
+      pointer-events: none;
     }
   }
 }

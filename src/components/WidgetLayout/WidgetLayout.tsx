@@ -10,7 +10,8 @@ type Props = {
 } & WidgetProps;
 
 export const WidgetLayout = (props: Props) => {
-  const handleDelete = () => {
+  const handleDelete = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
     if (props.onDelete) {
       props.onDelete(props.id!);
     }
@@ -22,7 +23,7 @@ export const WidgetLayout = (props: Props) => {
       {props.id !== undefined && (
         <button
           className={styles.deleteBtn}
-          onMouseDown={handleDelete}
+          onPointerDown={handleDelete}
           type='button'
         >
           <span className='material-symbols-outlined'>delete</span>
