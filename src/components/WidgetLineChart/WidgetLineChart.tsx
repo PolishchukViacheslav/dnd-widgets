@@ -11,6 +11,7 @@ import {
   YAxis,
 } from 'recharts';
 
+import type { WidgetProps } from '../../types/widget';
 import { WidgetLayout } from '../WidgetLayout/WidgetLayout';
 import { RenderLegend } from '../WidgetRenderLegend/WidgetRenderLegend';
 
@@ -61,12 +62,13 @@ const data = [
   },
 ];
 
-export const WidgetLineChart = React.memo(() => {
-  console.log('WidgetLineChart');
+export const WidgetLineChart = React.memo(({ id, onDelete }: WidgetProps) => {
   return (
     <WidgetLayout
       title='Line Chart Widget'
       description='Line Chart Widget Description'
+      id={id}
+      onDelete={onDelete}
     >
       <ResponsiveContainer style={{ flex: 1 }}>
         <LineChart

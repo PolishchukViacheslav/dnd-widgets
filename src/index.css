@@ -13,6 +13,7 @@
   --color-info: #17a2b8;
   --color-light: #f8f9fa;
   --color-dark: #343a40;
+  --color-white: #ffffff;
 
   /* Grays */
   --color-gray-100: #f8f9fa;
@@ -172,12 +173,12 @@ button {
 /* Selection styles */
 ::selection {
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-white);
 }
 
 ::-moz-selection {
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-white);
 }
 
 .container {

@@ -9,6 +9,7 @@ import {
   YAxis,
 } from 'recharts';
 
+import type { WidgetProps } from '../../types/widget';
 import { WidgetLayout } from '../WidgetLayout/WidgetLayout';
 import { RenderLegend } from '../WidgetRenderLegend/WidgetRenderLegend';
 
@@ -23,11 +24,13 @@ const data = [
   },
 ];
 
-export const WidgetBarChart = React.memo(() => {
+export const WidgetBarChart = React.memo(({ id, onDelete }: WidgetProps) => {
   return (
     <WidgetLayout
       title='Bar Chart Widget'
       description='Bar Chart Widget Description'
+      id={id}
+      onDelete={onDelete}
     >
       <ResponsiveContainer style={{ flex: 1 }}>
         <BarChart data={data} margin={{ left: 10, bottom: 30 }} barGap={10}>

@@ -1,11 +1,12 @@
 import React from 'react';
 
+import type { WidgetProps } from '../../types/widget';
 import { WidgetLayout } from '../WidgetLayout/WidgetLayout';
 import styles from './WidgetTextBlock.module.css';
 
-export const WidgetTextBlock = React.memo(() => {
+export const WidgetTextBlock = React.memo(({ id, onDelete }: WidgetProps) => {
   return (
-    <WidgetLayout title='Text Block Widget'>
+    <WidgetLayout title='Text Block Widget' id={id} onDelete={onDelete}>
       <div className={styles.container}>
         <p>
           YouScan’s AI-powered Visual Insights capability detects logos,
