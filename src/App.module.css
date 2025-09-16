@@ -2,7 +2,7 @@
   height: 100vh;
   position: relative;
   padding: var(--spacing-4);
-  overflow: auto;
+  overflow: hidden auto;
 }
 
 .scrollBox {
@@ -25,4 +25,5 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-4);
+  padding-bottom: var(--spacing-4);
 }
