@@ -1,0 +1,28 @@
+.container {
+  height: 100vh;
+  position: relative;
+  padding: var(--spacing-4);
+  overflow: auto;
+}
+
+.scrollBox {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-4);
+}
+.widgetWrapper {
+  padding-bottom: var(--spacing-4);
+}
+
+.rowWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--height, 0);
+  transform: translateY(var(--transform, 0));
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-4);
+}
