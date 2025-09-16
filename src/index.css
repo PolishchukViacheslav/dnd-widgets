@@ -3,6 +3,8 @@
 
 /* CSS Custom Properties (CSS Variables) */
 :root {
+  --actions-height: 70px;
+
   /* Colors */
   --color-primary: #007bff;
   --color-primary-dark: #0056b3;
@@ -68,6 +70,7 @@ html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  overflow: hidden;
 }
 
 body {

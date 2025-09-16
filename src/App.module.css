@@ -1,13 +1,13 @@
 .container {
-  height: 100vh;
+  height: calc(100vh - var(--actions-height));
   position: relative;
   padding: var(--spacing-4);
   overflow: hidden auto;
 }
 
 .actions {
+  position: relative;
   display: flex;
-  position: sticky;
   gap: var(--spacing-4);
   padding-block: var(--spacing-4);
   max-width: 1200px;
@@ -15,10 +15,10 @@
   background-color: var(--color-gray-200);
   box-shadow: 0 2px 0 var(--color-gray-200);
   z-index: 2;
+  height: var(--actions-height);
   .action {
     padding: var(--spacing-2) var(--spacing-4);
     border-radius: var(--border-radius-4);
-
     background-color: var(--color-gray-100);
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
